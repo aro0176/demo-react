@@ -100,7 +100,7 @@ function Classification() {
                     <div className="modal-body">
                         <form>
                             <div className="mb-3">
-                                <label htmlFor="numero" className="col-form-label">Numero de la salle:</label>
+                                <label htmlFor="numero" className="col-form-label">Numero:</label>
                                 <input type="text" className="form-control" id="numero" value={numero} onChange={(e) => setNumero(e.target.value)} />
                             </div>
                             <div className="mb-3">
