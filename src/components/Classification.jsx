@@ -25,7 +25,7 @@ function Classification() {
         else if(nomClass == '') {
             notifyErr('nom')
         }else{
-            const response = await axios.post('https://backapi.apmf.com/new', {'numero': numero, 'nom_class': nomClass})
+            const response = await axios.post('https://demoapi.apmf.com/new', {'numero': numero, 'nom_class': nomClass})
                 .then((resp) => console.log(resp))
                 .catch((err) => console.log(err))
 
@@ -38,7 +38,7 @@ function Classification() {
         if(confirm_delete){
             console.log(e.target.getAttribute('id_data'));
             const select_data = e.target.getAttribute('id_data');
-            axios.delete(`https://backapi.apmf.com/delete/${select_data}`)
+            axios.delete(`https://demoapi.apmf.com/delete/${select_data}`)
                     .then((resp) => {
                         console.log(resp);
                     })
@@ -53,7 +53,7 @@ function Classification() {
     const updateClass = (e) => {
         console.log(e.target.getAttribute('id_data'));
         setIsNew(false)
-        axios.get(`https://backapi.apmf.com/one/${e.target.getAttribute('id_data')}`)
+        axios.get(`https://demoapi.apmf.com/one/${e.target.getAttribute('id_data')}`)
                 .then(resp => {
                     console.log(resp);
                     setNomClass(resp.data.nom_class)
@@ -66,7 +66,7 @@ function Classification() {
     }
 
     const updateData = () => {
-        axios.put(`https://backapi.apmf.com/update/${selectData}`, {'nom_class': nomClass, 'numero': numero})
+        axios.put(`https://demoapi.apmf.com/update/${selectData}`, {'nom_class': nomClass, 'numero': numero})
             .then(resp => {
                 console.log(resp);
             })
@@ -78,7 +78,7 @@ function Classification() {
     }
 
     useEffect(() => {
-        axios.get('https://backapi.apmf.com/all')
+        axios.get('https://demoapi.apmf.com/all')
                 .then((resp) => {
                     setAllData(resp.data)
                 })
