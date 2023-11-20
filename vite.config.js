@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [react()],  server: {
     proxy: {
       '/api': {
-        target: 'https://api.apmf.com', // Remplacez par l'URL de votre serveur d'API
+        target: 'https://demoapi.apmf.com', // Remplacez par l'URL de votre serveur d'API
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
