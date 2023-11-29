@@ -21,7 +21,7 @@ function Home() {
             <h1 className="display-5 fw-bold">My APP</h1>
             <div className="col-lg-6 mx-auto">
                 <p className="lead mb-4">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, cumque laborum. Eaque vero saepe reiciendis provident. Animi ut aliquam consequuntur.
+                  MERCI POUR VOTRE AIMABLE ATTENTION
                 </p>
                 <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <Link to={'/class'}>
